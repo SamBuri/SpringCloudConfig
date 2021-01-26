@@ -1,0 +1,16 @@
+## YAML Template.
+---
+server:
+    port:8089
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: security
+        uri: 'http://localhost:8082/'
+        predicates:
+        - path: '/security/**'
+      - id: student
+        uri: http://localhost:8082/
+        predicates:
+        - path: "/student/**"
