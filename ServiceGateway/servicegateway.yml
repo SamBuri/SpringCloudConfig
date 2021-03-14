@@ -3,16 +3,14 @@
 server:
     port: 8089
 spring:
-   cloud:
+  cloud:
     gateway:
-      default-filters:
-        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
       globalcors:
-        corsConfigurations:
+        cors-configurations:
           '[/**]':
-            allowedOrigins: "*"
-            allowedMethods: "*"
-            allowedHeaders: "*"  
+            allowedOrigins: "https://docs.spring.io"
+            allowedMethods:
+            - GET
 # spring:
 #   cloud:
 #     gateway:
