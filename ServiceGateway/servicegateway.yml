@@ -11,9 +11,12 @@ spring:
           cors-configurations:
              '[/**]':
              allowed-origins: "*"
-             allowed-methods: "*"
+            allowedMethods:
+            - GET
+            - POST
              allowed-headers: "*"
              allow-credentials: true
+
 # spring:
 #   cloud:
 #     gateway:
