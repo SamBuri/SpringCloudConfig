@@ -3,19 +3,24 @@
 server:
     port: 8089 
 spring:
-   cloud:    
+  cloud:
     gateway:
       default-filters:
-        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_UNIQUE
+          - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin, RETAIN_UNIQUE
       globalcors:
-          cors-configurations:
-             '[/**]':
-             allowed-origins: "*"
+       add-to-simple-url-handler-mapping: true
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: 
+             - "*.ourdomain.com"
+             - "*.ourotherdomain.com"
+            allowCredentials: true
             allowedMethods:
             - GET
             - POST
-             allowed-headers: "*"
-             allow-credentials: true
+            - DELETE
+            - PUT
+            - OPTIONS
 
 # spring:
 #   cloud:
