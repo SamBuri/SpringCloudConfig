@@ -2,7 +2,7 @@
 
 server:
     port: 8089 
-pring:
+spring:
    cloud:    
     gateway:
       default-filters:
