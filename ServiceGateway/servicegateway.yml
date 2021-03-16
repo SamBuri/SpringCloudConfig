@@ -12,15 +12,15 @@ spring:
         corsConfigurations:
           '[/**]':
             allowedOrigins: 
-             - "*.ourdomain.com"
-             - "*.ourotherdomain.com"
+             - "http:localhost:8080/"
+             - "http:localhost:8080/countries"
             allowCredentials: true
             allowedMethods:
-            - GET
-            - POST
-            - DELETE
-            - PUT
-            - OPTIONS
+             - GET
+             - POST
+             - DELETE
+             - PUT
+             - OPTIONS
 # spring:
 #   cloud:
 #     gateway:
