@@ -21,7 +21,6 @@ spring:
             - DELETE
             - PUT
             - OPTIONS
-
 # spring:
 #   cloud:
 #     gateway:
