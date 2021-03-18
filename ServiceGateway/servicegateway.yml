@@ -2,25 +2,25 @@
 
 server:
     port: 8089 
-spring:
-  cloud:
-    gateway:
-      default-filters:
-          - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin, RETAIN_UNIQUE
-      globalcors:
-       add-to-simple-url-handler-mapping: true
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: 
-             - "http:localhost:8080/"
-             - "http:localhost:8080/countries"
-            allowCredentials: true
-            allowedMethods:
-             - GET
-             - POST
-             - DELETE
-             - PUT
-             - OPTIONS
+# spring:
+#   cloud:
+#     gateway:
+#       default-filters:
+#        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin, RETAIN_UNIQUE
+#       globalcors:
+#        add-to-simple-url-handler-mapping: true
+#         corsConfigurations:
+#           '[/**]':
+#             allowedOrigins: 
+#              - "http:localhost:8080/"
+#              - "http:localhost:8080/countries"
+#             allowCredentials: true
+#             allowedMethods:
+#              - GET
+#              - POST
+#              - DELETE
+#              - PUT
+#              - OPTIONS
 # spring:
 #   cloud:
 #     gateway:
