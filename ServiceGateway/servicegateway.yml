@@ -12,8 +12,7 @@ spring:
       corsConfigurations:
         '[/**]':
         allowedOrigins: 
-         - "http:localhost:8080/"
-         - "http:localhost:8080/countries"
+         - "http:localhost:8080"
         allowCredentials: true
         allowedMethods:
           - GET
